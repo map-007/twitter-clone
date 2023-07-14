@@ -63,7 +63,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <EllipsisHorizontalIcon />
+          <EllipsisHorizontalCircleIcon />
         </template>
         <template v-slot:name> More </template>
       </SidebarLeftTab>
@@ -79,7 +79,7 @@ import {
   BookmarkIcon,
   DocumentTextIcon,
   UserIcon,
-  EllipsisHorizontalIcon,
+  EllipsisHorizontalCircleIcon,
   PencilIcon,
   ChevronDownIcon,
 } from "@heroicons/vue/24/outline";
