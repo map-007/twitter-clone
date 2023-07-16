@@ -7,5 +7,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
+  runtimeConfig: {
+    jwtAccessSecret: process.env.JWT_ACCESS_TOKEN,
+    jwtRefreshSecret: process.env.JWT_REFRESH_TOKEN,
+  },
 });
