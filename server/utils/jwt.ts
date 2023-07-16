@@ -39,7 +39,27 @@ export const generateToken = (user: User) => {
 
 export const sendRefreshToken = (event: any, token: string) => {
   setCookie(event, "refresh_token", token, {
-      httpOnly: true,
-      sameSite: true
-  })
-} 
+    httpOnly: true,
+    sameSite: true,
+  });
+};
+
+export const decodeRefreshToken = (token: string) => {
+  const config = useRuntimeConfig();
+
+  try {
+    return jwt.verify(token, config.jwtRefreshSecret);
+  } catch (error) {
+    return null;
+  }
+};
+
+export const decodeAccessToken = (token: string) => {
+  const config = useRuntimeConfig();
+
+  try {
+    return jwt.verify(token, config.jwtAccessSecret);
+  } catch (error) {
+    return null;
+  }
+};
