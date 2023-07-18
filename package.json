@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@types/formidable": "^3.4.0",
     "@types/node": "^18.16.19",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.6.2",
@@ -24,6 +25,8 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/jwt-decode": "^3.1.0",
     "bcrypt": "^5.1.0",
+    "cloudinary": "^1.37.3",
+    "formidable": "^3.5.0",
     "jsonwebtoken": "^9.0.1",
     "jwt-decode": "^3.1.2",
     "url-pattern": "^1.0.3"
