@@ -67,6 +67,19 @@
         </template>
         <template v-slot:name> More </template>
       </SidebarLeftTab>
+      <div class="hidden xl:block">
+        <UIButton liquid size="lg" @on-click="emits('onTweet')">
+          <span class="font-bold"> Tweet </span>
+        </UIButton>
+      </div>
+
+      <div class="block xl:hidden">
+        <UIButton @on-click="emits('onTweet')">
+          <div class="w-6 h-6 font-bold">
+            <PencilIcon />
+          </div>
+        </UIButton>
+      </div>
     </div>
   </div>
 </template>
