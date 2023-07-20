@@ -23,10 +23,22 @@ export default defineEventHandler(async (event) => {
 
   const userId = event.context?.auth?.user?.id;
 
-  const tweetData = {
+  type TweetDataType = {
+    text: string,
+    authorId: string,
+    replyToId?: string,
+  }
+
+  const tweetData: TweetDataType = {
     text: fields.text.toString(),
     authorId: userId,
   };
+
+  const replyTo = fields.replyTo
+
+  if (replyTo && replyTo !== 'null') {
+    tweetData.replyToId = replyTo
+  }
 
   const newFiles = JSON.parse(JSON.stringify(files));
 
